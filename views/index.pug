@@ -5,9 +5,12 @@ block content
   form(method="POST" action="/")
     label(for="userText") Enter your text here:
     br
-    input(type="text" id="userText" name="userText")
+    input(type="text" id="userText" name="userText" value=`${phrase}`)
     br
     br
     button(type="submit") Submit
   if message
-    p=mesasage
+    p=message
+  h3 taco Cat is a palindrome.
+  h3 United States is not a palindrome.
+  h4 A palindrome is a word that can we rewritten backwards and still be the same word.

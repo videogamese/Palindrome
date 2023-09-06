@@ -4,12 +4,16 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    phrase: req.body.userText,
-    message: getResultDescription(req.body.userText)
-  } )
+    phrase: "taco Cat"
+  })
 });
 
-router.post('/', function ())
+router.post('/', function (req, res){
+  res.render('index', {
+    phrase: req.body.userText,
+    message: getResultDescription(req.body.userText)
+  })
+})
 function checkPalindrome(phrase){
   let temp = phrase.split("");
   temp = temp.reverse();
